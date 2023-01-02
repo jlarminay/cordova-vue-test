@@ -4,13 +4,10 @@ import {ref, onMounted} from 'vue'
 let messages = ref({})
 
 onMounted(() => {
-  smsreader.getAllSMS()
-    .then((sms)=>{
-      messages.value = sms
-    },
-    (err)=>{
-      alert(err)
-    });
+  document.addEventListener("deviceready", onDeviceReady, false)
+  function onDeviceReady() {
+    alert(navigator.camera)
+  }
 })
 </script>
 

@@ -1,4 +1,4 @@
-# SMS-Wrapped
+# Cordova/Vue Test
 
 ### Requirements
 

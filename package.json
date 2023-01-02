@@ -1,6 +1,6 @@
 {
-  "name": "ca.joshlarminay.smswrapped",
-  "displayName": "SMS-Wrapped",
+  "name": "ca.joshlarminay.cordovavuetest",
+  "displayName": "Cordova/Vue Test",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --port 8080",
@@ -22,6 +22,7 @@
     "@vue/eslint-config-prettier": "^7.0.0",
     "cordova": "^11.0.0",
     "cordova-android": "^10.1.2",
+    "cordova-plugin-camera": "^6.0.0",
     "cordova-sms-reader": "^0.0.3",
     "eslint": "^8.5.0",
     "eslint-plugin-vue": "^8.2.0",
@@ -35,7 +36,10 @@
       "android"
     ],
     "plugins": {
-      "cordova-sms-reader": {}
+      "cordova-sms-reader": {},
+      "cordova-plugin-camera": {
+        "ANDROIDX_CORE_VERSION": "1.6.+"
+      }
     }
   }
 }
