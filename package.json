@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite --port 8080",
 
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vue-tsc --noEmit && vite build --emptyOutDir",
 
     "serve:browser": "npm run build && http-server ./www -a localhost -p 8081 -o",
 
