@@ -1,15 +1,24 @@
+<script setup>
+import {ref, onMounted} from 'vue'
+
+let messages = ref({})
+
+onMounted(() => {
+  smsreader.getAllSMS()
+    .then((sms)=>{
+      messages.value = sms
+    },
+    (err)=>{
+      alert(err)
+    });
+})
+</script>
+
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    {{ messages }}
   </div>
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
 </style>

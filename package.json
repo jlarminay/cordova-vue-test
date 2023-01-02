@@ -4,12 +4,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --port 8080",
-    "build": "vue-tsc --noEmit && vite build --emptyOutDir",
+    "build": "vite build --emptyOutDir",
     "browser:serve": "npm run build && http-server ./www -a localhost -p 8081 -o",
     "android:build": "npm run build && cordova build android --stacktrace",
     "android:serve": "npm run build && cordova run android --device",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "typecheck": "vue-tsc --noEmit"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "pinia": "^2.0.13",
@@ -18,26 +17,25 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
-    "@types/node": "^16.11.26",
     "@vitejs/plugin-vue": "^2.3.1",
     "@vue/cli": "^5.0.8",
     "@vue/eslint-config-prettier": "^7.0.0",
-    "@vue/eslint-config-typescript": "^10.0.0",
-    "@vue/tsconfig": "^0.1.3",
     "cordova": "^11.0.0",
     "cordova-android": "^10.1.2",
+    "cordova-sms-reader": "^0.0.3",
     "eslint": "^8.5.0",
     "eslint-plugin-vue": "^8.2.0",
     "http-server": "^14.1.1",
     "prettier": "^2.5.1",
-    "typescript": "~4.6.3",
     "vite": "^2.9.1",
-    "vue-cli-plugin-cordova": "~2.4.1",
-    "vue-tsc": "^0.33.9"
+    "vue-cli-plugin-cordova": "~2.4.1"
   },
   "cordova": {
     "platforms": [
       "android"
-    ]
+    ],
+    "plugins": {
+      "cordova-sms-reader": {}
+    }
   }
 }

@@ -1,0 +1,10 @@
+{
+  "cordova-sms-reader": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-sms-reader@^0.0.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}
