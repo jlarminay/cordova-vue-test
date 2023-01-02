@@ -4,14 +4,10 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --port 8080",
-
     "build": "vue-tsc --noEmit && vite build --emptyOutDir",
-
-    "serve:browser": "npm run build && http-server ./www -a localhost -p 8081 -o",
-
-    "build:android": "npm run build && cordova build android --stacktrace",
-    "serve:android": "npm run build && cordova run android --device",
-    
+    "browser:serve": "npm run build && http-server ./www -a localhost -p 8081 -o",
+    "android:build": "npm run build && cordova build android --stacktrace",
+    "android:serve": "npm run build && cordova run android --device",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "typecheck": "vue-tsc --noEmit"
   },
