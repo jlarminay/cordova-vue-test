@@ -1,0 +1,43 @@
+{
+  "name": "ca.joshlarminay.sms-wrapped",
+  "displayName": "SMS-Wrapped",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --port 8080",
+
+    "build:browser": "vue-tsc --noEmit && vite build",
+    "serve:browser": "npm run build:browser && http-server ./www -p 8081 -a localhost",
+
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "cordova": "^11.0.0",
+    "http-server": "^14.1.1",
+    "pinia": "^2.0.13",
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.0",
+    "@types/node": "^16.11.26",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "@vue/tsconfig": "^0.1.3",
+    "cordova-android": "^10.1.2",
+    "cordova-browser": "^6.0.0",
+    "eslint": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-vue": "^8.2.0",
+    "prettier": "^2.5.1",
+    "typescript": "~4.6.3",
+    "vite": "^2.9.1",
+    "vue-tsc": "^0.33.9"
+  },
+  "cordova": {
+    "platforms": [
+      "android",
+      "browser"
+    ]
+  }
+}
